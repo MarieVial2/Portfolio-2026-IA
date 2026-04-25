@@ -142,64 +142,44 @@ header h2 {
 
 /* PRESENTATION */
 
-#presentation-texte {
-    font-size: 0.875rem;
+.presentation-hero {
+    padding: 30px 20px;
 }
 
-#boutons-presentation {
+.presentation-header {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.presentation-photo-wrap {
+    margin: 0 auto;
+}
+
+.presentation-photo {
+    width: 130px;
+    height: 130px;
+}
+
+.presentation-accroche {
+    font-size: 1.6rem;
+}
+
+.presentation-etapes {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.presentation-ctas {
     flex-direction: column;
+    align-items: stretch;
 }
 
 
 /* REALISATIONS */
 
-.content-realisation-item-mobile p {
-    font-size: 0.813rem;
-}
-
-
-.card-container {
-    margin-top: 50px;
-    width: 270px;
-    border: none;
-}
-
-.card {
-    width: 270px;
-}
-
-.card-front-encart {
-    height: 300px;
-    width: 250px;
-    flex-direction: column;
-    padding: 20px;
-}
-
-
-
-.content-realisation-item-mobile {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 0.938rem;
-}
-
-.content-realisation-item-mobile i {
-    font-size: 1.563rem;
-    margin: 5px;
-}
-
-.content-realisation-item {
-    height: 400px;
-    flex-direction: column;
-}
-
-.cacher {
-    display : none;
-}
-
-.card-container:hover .card {
-    transform: rotateY(0deg);
+.projet-card .card-img-top {
+    height: 140px;
 }
 
 .tailleur {
@@ -315,3 +295,4 @@ header h2 {
     background-color: #cbcbcb;
 
 }
+

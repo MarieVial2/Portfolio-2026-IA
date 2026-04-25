@@ -120,57 +120,73 @@
    
 
     <section id="presentation">
-        <div class="container d-flex justify-content-center">
-            <div id="encart-presentation">
-                <h3><i class="fa-solid fa-bookmark i-left"></i>Présentation<i class="fa-solid fa-bookmark i-right"></i>
-                </h3>
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div id="presentation-photo">
-
-                            <div id="photo-marie">
-                                <img src="images/PhotoMarie.jpg" alt="Photo de Marie Vial"
-                                    class="image-accessibilite" />
-                            </div>
-                        </div>
+        <div class="container">
+            <h3><i class="fa-solid fa-bookmark i-left"></i>Présentation<i class="fa-solid fa-bookmark i-right"></i></h3>
+            <div class="presentation-hero">
+                <div class="presentation-header">
+                    <div class="presentation-photo-wrap">
+                        <img src="images/PhotoMarie.jpg" alt="Photo de Marie Vial" class="presentation-photo" loading="lazy" />
                     </div>
-                    <div class="col-lg-7">
-                        <div id="presentation-texte">
-                            <p>Bonjour ! Je m'appelle Marie, j'ai 34 ans et je suis en reconversion vers le
-                                développement informatique.
-                                En 2023, j'ai obtenu le Titre Professionnel <strong>Développeur Web et Web
-                                    Mobile</strong> à l'issue d'une formation intensive. Après cette certification, j'ai
-                                repris temporairement mon activité dans l'accompagnement éducatif, le temps de
-                                consolider mon projet et de préparer la suite de mon parcours.</p>
-                            <p>Depuis 2025, j'ai intégré un <strong>BUT Informatique</strong>, afin de développer une
-                                culture solide en informatique générale et de me spécialiser vers le développement
-                                applicatif.
-                                Déjà à l'aise avec les technologies web, je continue de progresser et de monter en
-                                compétences sur des outils tels que Java, JavaScript, PHP, et prochainement Vue.js et
-                                Spring Boot.</p>
-                            <p>Ce qui me motive : <strong>apprendre</strong> tous les jours, <strong>développer</strong>
-                                des solutions fiables et bien construites et évoluer au sein d'une équipe technique
-                                <strong>stimulante</strong>.
-                                Aujourd'hui, je recherche un <strong>stage de fin d'année </strong>(niveau BUT2) et,
-                                idéalement, une <strong>alternance </strong>pour la rentrée universitaire prochaine.
-                                <strong>N'hésitez pas à me contacter !</strong>
-                            </p>
-                            <div id="boutons-presentation">
-                                <a class="btn btn-outline-dark" href="mailto:vial.marie16@gmail.com" role="button">Me
-                                    contacter</a>
-                                <a class="btn btn-outline-dark down-button" href="cv/CV_Marie_Vial_Developpement.pdf"
-                                    target="_blank" rel="noopener">
-                                    Voir mon CV
-                                </a>
-                            </div>
-                        </div>
+                    <div class="presentation-intro">
+                        <p class="presentation-stats">35 ans · Lyon · BUT2 Informatique</p>
+                        <h2 class="presentation-accroche">Marie Vial,<br><span>développeuse en construction.</span></h2>
+                        <p class="presentation-pitch">Une reconversion menée étape par étape — de l'accompagnement éducatif au développement.</p>
                     </div>
-
                 </div>
 
+                <div class="presentation-etapes">
+                    <article class="presentation-etape">
+                        <div class="presentation-etape-tete">
+                            <span class="presentation-puce"><i class="fa-solid fa-seedling"></i></span>
+                            <div>
+                                <span class="presentation-label">Hier</span>
+                                <h5>2023 — La bascule</h5>
+                            </div>
+                        </div>
+                        <p>Titre Professionnel <strong>Développeur Web et Web Mobile</strong> obtenu à Arinfo. Première immersion dans le code et confirmation de la voie.</p>
+                    </article>
+
+                    <article class="presentation-etape presentation-etape-active">
+                        <div class="presentation-etape-tete">
+                            <span class="presentation-puce"><i class="fa-solid fa-rocket"></i></span>
+                            <div>
+                                <span class="presentation-label">Aujourd'hui</span>
+                                <h5>BUT Informatique — IUT Lyon 1</h5>
+                            </div>
+                        </div>
+                        <p>Je consolide ma culture informatique et je code au quotidien avec :</p>
+                        <ul class="presentation-tags">
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>Vue.js</li>
+                            <li>Symfony</li>
+                            <li>Kotlin</li>
+                            <li>SQL</li>
+                            <li>IA</li>
+                        </ul>
+                    </article>
+
+                    <article class="presentation-etape">
+                        <div class="presentation-etape-tete">
+                            <span class="presentation-puce"><i class="fa-solid fa-bullseye"></i></span>
+                            <div>
+                                <span class="presentation-label">Demain</span>
+                                <h5>Stage BUT puis alternance</h5>
+                            </div>
+                        </div>
+                        <p>Recherche d'un <strong>stage de fin d'année</strong> et idéalement d'une <strong>alternance</strong> à la rentrée. A la rentrée : Spring Boot et Angular.</p>
+                    </article>
+                </div>
+
+                <div class="presentation-ctas">
+                    <a class="btn btn-dark" href="mailto:vial.marie16@gmail.com">Me contacter</a>
+                    <a class="btn btn-outline-dark" href="cv/CV_Marie_Vial_Developpement.pdf" target="_blank" rel="noopener">Voir mon CV</a>
+                </div>
             </div>
         </div>
     </section>
+
 
 
     <section id="parcours">
@@ -258,203 +274,80 @@
         <div class="container ">
             <h3><i class="fa-solid fa-bookmark i-left"></i>Mes réalisations<i class="fa-solid fa-bookmark i-right"></i>
             </h3>
-            <div id="item-display" class="row">
-                <div id="item-display" class="row">
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <div class="card-container">
-                            <div class="card">
-                                <div class="card-front-bagad">
-                                    <div class="card-front-encart">
-                                        <h6>Site du Bagad Orvez</h6>
-                                        <div class="content-realisation-item-mobile">
-                                            <p>Site du Bagad d'Orvault et de son école de musique. </p>
-                                            <p><a href="https://bagadorvez.bzh" class="btn btn-outline-light"
-                                                    type="button">Voir la page</a>
-                                            </p>
-
-                                            <p>Technos utilisées :</p>
-                                            <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                                    class="fa-brands fa-css3-alt"></i><i
-                                                    class="fa-brands fa-square-js"></i><i
-                                                    class="fa-brands fa-bootstrap"></i><i
-                                                    class="fa-brands fa-php"></i><i class="fa-brands fa-symfony"></i>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-back-bagad">
-                                    <div class="content-realisation-item">
-                                        <p>Site du Bagad d'Orvault et de son école de musique. </p>
-                                        <p><a href="https://bagadorvez.bzh" class="btn btn-outline-light"
-                                                type="button">Voir la page</a>
-                                        </p>
-
-                                        <p>Technos utilisées :</p>
-                                        <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                                class="fa-brands fa-css3-alt"></i><i
-                                                class="fa-brands fa-square-js"></i><i
-                                                class="fa-brands fa-bootstrap"></i><i class="fa-brands fa-php"></i><i
-                                                class="fa-brands fa-symfony"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
-
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <div class="card-container">
-                            <div class="card">
-                                <div class="card-front-portfolio">
-                                    <div class="card-front-encart">
-                                        <h6>Portfolio</h6>
-                                        <div class="content-realisation-item-mobile">
-                                            <p>Vous y êtes !</p>
-                                            <p>Technos utilisées :</p>
-                                            <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                                    class="fa-brands fa-css3-alt"></i><i
-                                                    class="fa-brands fa-square-js"></i><i
-                                                    class="fa-brands fa-bootstrap"></i></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-back-portfolio">
-                                    <div class="content-realisation-item">
-                                        <p>Vous y êtes !</p>
-                                        <p>Technos utilisées :</p>
-                                        <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                                class="fa-brands fa-css3-alt"></i><i
-                                                class="fa-brands fa-square-js"></i><i
-                                                class="fa-brands fa-bootstrap"></i></p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div id="item-display" class="row deuxieme-rangee">
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <div class="card-container">
-                            <div class="card">
-                                <div class="card-front-factures">
-                                    <div class="card-front-encart">
-                                        <h6>App de factures</h6>
-                                        <div class="content-realisation-item-mobile">
-                                            <p>Réalisation en groupe d'une application de génération, consultation de
-                                                facture avec authentification.
-                                            <div class="cacher">Partie prise en charge
-                                                (entre autres) : controllers des relevés, des factures</div>
-                                            </p>
-                                            <p><a href="https://github.com/MarieVial2/Electronvert"
-                                                    class="btn btn-outline-light" type="button">Voir le code</a>
-                                            </p>
-
-
-                                            <p>Technos utilisées :</p>
-                                            <p class="techno-realisations-items"><i class="fa-brands fa-java"></i></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-back-factures">
-                                    <div class="content-realisation-item">
-                                        <p>Réalisation d'une application de génération, consultation de facture avec
-                                            authentification utilisateur/admin. Partie prise en charge (entre autres) :
-                                            controllers des relevés, des factures</p>
-                                        <p><a href="https://github.com/MarieVial2/Electronvert"
-                                                class="btn btn-outline-light" type="button">Voir le code</a>
-                                        </p>
-
-                                        <p>Technos utilisées :</p>
-                                        <p class="techno-realisations-items"><i class="fa-brands fa-java"></i></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <div class="card-container">
-                            <div class="card">
-                                <div class="card-front-the">
-                                    <div class="card-front-encart">
-                                        <h6>L'art du thé</h6>
-                                        <div class="content-realisation-item-mobile">
-                                            <p>Intégration d'une maquette de site dédié au thé</p>
-                                            <p><a href="https://marievial2.github.io/site-the/"
-                                                    class="btn btn-outline-light" type="button">Voir la page</a>
-                                            </p>
-                                            <p>Technos utilisées :</p>
-                                            <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                                    class="fa-brands fa-css3-alt"></i>
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-back-the">
-                                    <div class="content-realisation-item">
-                                        <p>Intégration d'une maquette de site dédié au thé</p>
-                                        <p><a href="https://marievial2.github.io/site-the/"
-                                                class="btn btn-outline-light" type="button">Voir la page</a>
-                                        </p>
-                                        <p>Technos utilisées :</p>
-                                        <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                                class="fa-brands fa-css3-alt"></i>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4 animate-on-scroll">
+                <div class="col">
+                    <div class="card projet-card h-100">
+                        <img src="images/site-bagad.jpg" class="card-img-top" alt="Site du Bagad Orvez">
+                        <div class="card-body">
+                            <h6>Site du Bagad Orvez</h6>
+                            <p>Site du Bagad d'Orvault et de son école de musique.</p>
+                            <p class="techno-realisations-items">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-square-js"></i>
+                                <i class="fa-brands fa-bootstrap"></i>
+                                <i class="fa-brands fa-php"></i>
+                                <i class="fa-brands fa-symfony"></i>
+                            </p>
+                            <a href="https://bagadorvez.bzh" class="btn btn-outline-dark btn-sm">Voir la page</a>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div id="item-display" class="row troisieme-rangee">
-
-                <div class="col-md-12 d-flex justify-content-center">
-                    <div class="card-container tailleur">
-                        <div class="card">
-                            <div class="card-front-tailleur">
-                                <div class="card-front-encart">
-                                    <h6>TP Tailleur</h6>
-                                    <div class="content-realisation-item-mobile">
-                                        <p>Un site vitrine pour un tailleur imaginaire</p>
-                                        <p><a href="https://marievial2.github.io/TP-Tailleur/"
-                                                class="btn btn-outline-light" type="button">Voir la page</a>
-                                        </p>
-                                        <p>Technos utilisées :</p>
-                                        <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                                class="fa-brands fa-css3-alt"></i><i class="fa-brands fa-sass"></i><i
-                                                class="fa-brands fa-bootstrap"></i>
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-back-tailleur">
-                                <div class="content-realisation-item">
-                                    <p>Un site vitrine pour un tailleur imaginaire</p>
-                                    <p><a href="https://marievial2.github.io/TP-Tailleur/" class="btn btn-outline-light"
-                                            type="button">Voir la page</a>
-                                    </p>
-                                    <p>Technos utilisées :</p>
-                                    <p class="techno-realisations-items"><i class="fa-brands fa-html5"></i><i
-                                            class="fa-brands fa-css3-alt"></i><i class="fa-brands fa-sass"></i><i
-                                            class="fa-brands fa-bootstrap"></i></p>
-
-                                </div>
-                            </div>
-
-
+                <div class="col">
+                    <div class="card projet-card h-100">
+                        <img src="images/portfolio.jpg" class="card-img-top" alt="Portfolio">
+                        <div class="card-body">
+                            <h6>Portfolio</h6>
+                            <p>Vous y êtes !</p>
+                            <p class="techno-realisations-items">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-square-js"></i>
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card projet-card h-100">
+                        <img src="images/factures.jpg" class="card-img-top" alt="App de factures">
+                        <div class="card-body">
+                            <h6>App de factures</h6>
+                            <p>Réalisation en groupe d'une application de génération et consultation de factures avec authentification utilisateur/admin. Partie prise en charge (entre autres) : controllers des relevés, des factures.</p>
+                            <p class="techno-realisations-items">
+                                <i class="fa-brands fa-java"></i>
+                            </p>
+                            <a href="https://github.com/MarieVial2/Electronvert" class="btn btn-outline-dark btn-sm">Voir le code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card projet-card h-100">
+                        <img src="images/blog.jpg" class="card-img-top" alt="Blog Les dés sont jetés">
+                        <div class="card-body">
+                            <h6>Blog "Les dés sont jetés"</h6>
+                            <p>Un blog fonctionnel (avec gestion d'articles, de commentaires et de catégories)</p>
+                            <p class="techno-realisations-items">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-bootstrap"></i>
+                                <i class="fa-brands fa-php"></i>
+                            </p>
+                            <a href="https://github.com/MarieVial2/blog_les_des_sont_jetes" class="btn btn-outline-dark btn-sm">Voir le code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card projet-card h-100">
+                        <img src="images/the.jpg" class="card-img-top" alt="L'art du thé">
+                        <div class="card-body">
+                            <h6>L'art du thé</h6>
+                            <p>Intégration d'une maquette de site dédié au thé</p>
+                            <p class="techno-realisations-items">
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </p>
+                            <a href="https://marievial2.github.io/site-the/" class="btn btn-outline-dark btn-sm">Voir la page</a>
                         </div>
                     </div>
                 </div>
@@ -464,11 +357,11 @@
 
 
         <div class="row">
-            <div id="paragraphe-realisations"><strong>Autres projets :</strong>
+            <div id="paragraphe-realisations"><strong>Autres projets</strong>
 
-                <p>BUT info (projets en cours) : station météo avec Raspberry Pi (Python/Flask); app web de
-                    ticketing (travaux de groupe)</p>
-                <p>DWWM : intégration de maquettes,
+                <p><i class="fa-solid fa-graduation-cap"></i> BUT informatique - travaux de groupe : station météo avec Raspberry Pi (Python/Flask); app web de
+                    ticketing (PHP)</p>
+                <p><i class="fa-solid fa-code"></i> DWWM : intégration de maquettes,
                     réalisations de sites vitrines, de
                     sites fonctionnels en PHP (PDO) et en Symfony. Vous pouvez les
                     trouver sur

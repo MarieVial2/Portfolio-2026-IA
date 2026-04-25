@@ -132,22 +132,14 @@ window.onload = function () {
     const isElementInViewport = el => {
         const rect = el.getBoundingClientRect();
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= viewportHeight &&
-            rect.right <= viewportWidth
-        );
+        return rect.top < viewportHeight && rect.bottom > 0;
     };
 
     const detectAndAnimate = (selector) => {
         document.querySelectorAll(selector).forEach(element => {
-            element.classList.toggle(
-                'is-visible',
-                isElementInViewport(element)
-            );
+            if (isElementInViewport(element)) {
+                element.classList.add('is-visible');
+            }
         });
     };
 

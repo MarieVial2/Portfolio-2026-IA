@@ -192,81 +192,44 @@
     <section id="parcours">
         <h3 class="animate-on-scroll"><i class="fa-solid fa-bookmark i-left"></i>Parcours<i
                 class="fa-solid fa-bookmark i-right"></i></h3>
-        <div id="timeline-bloc">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-                <ul class="timeline timeline-centered">
-                    <li class="timeline-item">
-                        <div class="timeline-info">
-                            <span>2025 - 2027</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h5 class="timeline-title">BUT Informatique - année spéciale, orientation développement
-                                d'applications</h5>
-                            <p>Effectué à l'IUT Lyon 1</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-info">
-                            <span>2023</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h5 class="timeline-title">Réalisation du site du Bagad Orvez</h5>
-                            <p><a href="https://bagadorvez.bzh"><button type="button" class="btn btn-outline-dark">Y
-                                        aller</button></a></p>
-                        </div>
-                    </li>
-                    <li class="timeline-item animate-on-scroll">
-                        <div class="timeline-info">
-                            <span>2022 - 2023</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h5 class="timeline-title">Formation développeur web et web mobile (DWWM)</h5>
-                            <p>Effectuée à Arinfo (Nantes)</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item animate-on-scroll">
-                        <div class="timeline-info">
-                            <span>2016 - 2025</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h5 class="timeline-title">Missions d'accompagnement éducatif</h5>
-                            <p>Missions d'aide aux devoirs, de soutien scolaire, de coaching pour adolescents; poste
-                                d'Accompagnante d'Elèves en Situation de Handicap</p>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item animate-on-scroll">
-                        <div class="timeline-info">
-                            <span>2016</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h5 class="timeline-title">Master didactique des langues et Français Langue Etrangère</h5>
-                            <p>Université Savoie Mont-Blanc</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item animate-on-scroll">
-                        <div class="timeline-info">
-                            <span>2014</span>
-                        </div>
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h5 class="timeline-title">Licence Sciences du Langage</h5>
-                            <p>Université Lyon II</p>
-                        </div>
-                    </li>
-
-
-                </ul>
-            </div>
-
-
-        </div>
-
+        <ol class="parcours-timeline">
+            <li class="parcours-entry animate-on-scroll">
+                <div class="parcours-date">2025 – 2027</div>
+                <div class="parcours-card">
+                    <h5>BUT Informatique — année spéciale</h5>
+                    <p>Orientation développement d'applications, IUT Lyon 1.</p>
+                </div>
+            </li>
+            <li class="parcours-entry animate-on-scroll">
+                <div class="parcours-date">2023</div>
+                <div class="parcours-card">
+                    <h5>Site du Bagad Orvez</h5>
+                    <p>Réalisation du site du Bagad d'Orvault et de son école de musique.</p>
+                    <a href="https://bagadorvez.bzh" class="btn btn-outline-dark btn-sm">Y aller</a>
+                </div>
+            </li>
+            <li class="parcours-entry animate-on-scroll">
+                <div class="parcours-date">2022 – 2023</div>
+                <div class="parcours-card">
+                    <h5>Formation DWWM</h5>
+                    <p>Développeur Web et Web Mobile, Arinfo (Nantes).</p>
+                </div>
+            </li>
+            <li class="parcours-entry animate-on-scroll">
+                <div class="parcours-date">2016 – 2025</div>
+                <div class="parcours-card">
+                    <h5>Missions d'accompagnement éducatif</h5>
+                    <p>Aide aux devoirs, soutien scolaire, coaching d'adolescents et poste d'AESH.</p>
+                </div>
+            </li>
+            <li class="parcours-entry animate-on-scroll">
+                <div class="parcours-date">2014 – 2016</div>
+                <div class="parcours-card">
+                    <h5>Parcours universitaire en Sciences du langage</h5>
+                    <p>Licence (Lyon II) puis Master Didactique des langues et FLE (Savoie Mont-Blanc).</p>
+                </div>
+            </li>
+        </ol>
     </section>
 
 
@@ -380,302 +343,103 @@
     </section>
 
     <section id="competences">
-        <div class="container">
-            <div class="row">
 
-                <div class="col-lg-6">
-                    <div class="row">
+        <div class="competences-bloc">
+            <h3><i class="fa-solid fa-bookmark i-left"></i>Technologies<i class="fa-solid fa-bookmark i-right"></i></h3>
+            <div id="bloc-technologies">
+                <div class="techno-tile" style="--brand:#e34f26" data-niveau="Bon niveau">
+                    <div class="techno-hex"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#1572b6" data-niveau="Bon niveau">
+                    <div class="techno-hex"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#f7df1e" data-niveau="Intermédiaire">
+                    <div class="techno-hex"><i class="fa-brands fa-square-js"></i><span>JavaScript</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#7952b3" data-niveau="Bon niveau">
+                    <div class="techno-hex"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#cc6699" data-niveau="Notions">
+                    <div class="techno-hex"><i class="fa-brands fa-sass"></i><span>Sass</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#777bb4" data-niveau="Intermédiaire">
+                    <div class="techno-hex"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#000000" data-niveau="Débutante">
+                    <div class="techno-hex"><i class="fa-brands fa-symfony"></i><span>Symfony</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#ed8b00" data-niveau="Intermédiaire">
+                    <div class="techno-hex"><i class="fa-brands fa-java"></i><span>Java</span></div>
+                </div>
+                <div class="techno-tile" style="--brand:#a8b9cc" data-niveau="Notions">
+                    <div class="techno-hex"><i class="fa-solid fa-c"></i><span>C</span></div>
+                </div>
+            </div>
+        </div>
 
-                        <h3><i class="fa-solid fa-bookmark i-left"></i>Technologies<i
-                                class="fa-solid fa-bookmark i-right"></i></h3>
-                        <div id="bloc-technologies">
-
-
-
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-html5"></i></div>
-                                <div>HTML</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-css3-alt"></i></div>
-                                <div>CSS</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-square-js"></i></div>
-                                <div>Javascript</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-bootstrap"></i></div>
-                                <div>Bootstrap</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-sass"></i></div>
-                                <div>Sass</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-php"></i></div>
-                                <div>PHP</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-symfony"></i></div>
-                                <div>Symfony</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-brands fa-java"></i></div>
-                                <div>Java</div>
-
-                            </div>
-                            <div class="techno-item">
-                                <div><i class="fa-solid fa-c"></i></div>
-                                <div>C</div>
-
-                            </div>
-
-
-                        </div>
+        <div class="competences-bloc">
+            <div id="bloc-autres">
+                <h3><i class="fa-solid fa-bookmark i-left"></i>Autres<i class="fa-solid fa-bookmark i-right"></i></h3>
+                <div class="autres-cats">
+                    <div class="autres-cat">
+                        <span class="autres-cat-label"><i class="fa-solid fa-code"></i>Autres langages</span>
+                        <span class="autres-tag t-rose">Kotlin</span>
+                        <span class="autres-tag t-rose">Jetpack Compose</span>
+                        <span class="autres-tag t-rose">Vue.js</span>
+                        <span class="autres-tag t-rose">SQL / PL-SQL</span>
                     </div>
-                    <div class="row">
-                        <div id="bloc-autres">
-                            <h3><i class="fa-solid fa-bookmark i-left"></i>Autres<i
-                                    class="fa-solid fa-bookmark i-right"></i></h3>
-
-                            <p>En cours d'acquisition : <strong>React</strong> et <strong>Vue.js</strong></p>
-                            <p>Bientôt : SpringBoot, Angular</p>
-                            <p><strong>SQL - PL/SQL</strong></p>
-                            <p>Modélisation <strong>UML, Merise</strong></p>
-                            <p><strong>Qualité de développement</strong> : test unitaires, bonnes pratiques</p>
-                            <p>Maquettage, référencement SEO, accessibilité</p>
-                            <p><strong>Culture informatique</strong> : réseaux, architecture des ordi,
-                                programmation
-                                système...</p>
-                            <p><strong>Anglais</strong> : niveau C1 (lecture de doc technique)</p>
-
-
-
-                        </div>
+                    <div class="autres-cat">
+                        <span class="autres-cat-label"><i class="fa-solid fa-wand-magic-sparkles"></i>IA &amp; prompting</span>
+                        <span class="autres-tag t-purple">Claude CLI</span>
+                        <span class="autres-tag t-purple">ChatGPT</span>
+                        <span class="autres-tag t-purple">Économie tokens</span>
+                    </div>
+                    <div class="autres-cat">
+                        <span class="autres-cat-label"><i class="fa-solid fa-diagram-project"></i>Modélisation</span>
+                        <span class="autres-tag t-blue">UML</span>
+                        <span class="autres-tag t-blue">Merise</span>
+                    </div>
+                    <div class="autres-cat">
+                        <span class="autres-cat-label"><i class="fa-solid fa-check-double"></i>Qualité &amp; web</span>
+                        <span class="autres-tag t-green">Tests unitaires</span>
+                        <span class="autres-tag t-green">Bonnes pratiques</span>
+                        <span class="autres-tag t-green">Maquettage</span>
+                        <span class="autres-tag t-green">SEO</span>
+                        <span class="autres-tag t-green">Accessibilité</span>
+                    </div>
+                    <div class="autres-cat">
+                        <span class="autres-cat-label"><i class="fa-solid fa-microchip"></i>Culture info</span>
+                        <span class="autres-tag t-amber">Réseaux</span>
+                        <span class="autres-tag t-amber">Architecture</span>
+                        <span class="autres-tag t-amber">Programmation système</span>
+                    </div>
+                    <div class="autres-cat">
+                        <span class="autres-cat-label"><i class="fa-solid fa-globe"></i>Langues</span>
+                        <span class="autres-tag t-rose">Anglais — C1</span>
                     </div>
                 </div>
-                <div class="col-lg-6">
+            </div>
+        </div>
 
-                    <div id="bloc-competences">
-                        <h3><i class="fa-solid fa-bookmark i-left"></i>Compétences<i
-                                class="fa-solid fa-bookmark i-right"></i></h3>
-                        <div class="body">
-                            <div class="container-competences center">
-
-                                <!-- Code issu de code pen, remanié pour mon usage-->
-                                <div>
-                                    <?xml version="1.0" encoding="utf-8"?>
-
-                                    <svg class="hexagon top" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;"
-                                        xml:space="preserve">
-                                        <style type="text/css">
-                                            .st0 {
-                                                fill: #222222;
-                                            }
-                                        </style>
-                                        <polygon class="st0"
-                                            points="74.7,7.2 25.3,7.2 0.5,50 25.3,92.8 74.7,92.8 99.5,50 " />
-                                    </svg>
-                                    <span class="hexagon-icon top">
-                                        <div class="tooltip-container">
-                                            Curiosité
-                                            <span class="tooltip tooltip2">
-                                                Soif d'apprendre et d'aller plus loin.</span>
-                                        </div>
-                                    </span>
-
-                                </div>
-                                <div>
-                                    <?xml version="1.0" encoding="utf-8"?>
-
-                                    <svg class="hexagon top-right" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;"
-                                        xml:space="preserve">
-                                        <style type="text/css">
-                                            .st1 {
-                                                fill: #222222e9;
-                                            }
-                                        </style>
-                                        <polygon class="st1"
-                                            points="74.7,7.2 25.3,7.2 0.5,50 25.3,92.8 74.7,92.8 99.5,50 " />
-                                    </svg>
-                                    <span class="hexagon-icon top-right">
-                                        <div class="tooltip-container">
-                                            Travail en équipe
-                                            <span class="tooltip">J'ai travaillé en équipe à de nombreuses occasions,
-                                                j'ai ainsi
-                                                développé des compétences de communication et d'organisation.</span>
-                                        </div>
-                                    </span>
-
-                                </div>
-                                <div>
-                                    <?xml version="1.0" encoding="utf-8"?>
-
-                                    <svg class="hexagon bottom-right" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;"
-                                        xml:space="preserve">
-                                        <style type="text/css">
-                                            .st2 {
-                                                fill: #222222cc;
-                                            }
-                                        </style>
-                                        <polygon class="st2"
-                                            points="74.7,7.2 25.3,7.2 0.5,50 25.3,92.8 74.7,92.8 99.5,50 " />
-                                    </svg>
-                                    <span class="hexagon-icon bottom-right">
-                                        <div class="tooltip-container">
-                                            Attention <br /> aux détails
-                                            <span class="tooltip tooltip2">Je suis méticuleuse et fais attention aux
-                                                détails subtils.</span>
-                                        </div>
-                                    </span>
-
-                                </div>
-                                <div>
-                                    <?xml version="1.0" encoding="utf-8"?>
-
-                                    <svg class="hexagon bottom" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;"
-                                        xml:space="preserve">
-                                        <style type="text/css">
-                                            .st3 {
-                                                fill: #2222229d;
-                                            }
-                                        </style>
-                                        <polygon class="st3"
-                                            points="74.7,7.2 25.3,7.2 0.5,50 25.3,92.8 74.7,92.8 99.5,50 "
-                                            fill="#222222" />
-                                    </svg>
-                                    <span class="hexagon-icon bottom">
-                                        <div class="tooltip-container">
-                                            Autonomie
-                                            <span class="tooltip tooltip2">Je sais chercher par mes propres
-                                                moyens.</span>
-                                        </div>
-                                    </span>
-
-                                </div>
-                                <div>
-                                    <?xml version="1.0" encoding="utf-8"?>
-
-                                    <svg class="hexagon bottom-left" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;"
-                                        xml:space="preserve">
-                                        <style type="text/css">
-                                            .st4 {
-                                                fill: #22222275;
-                                            }
-                                        </style>
-                                        <polygon class="st4"
-                                            points="74.7,7.2 25.3,7.2 0.5,50 25.3,92.8 74.7,92.8 99.5,50 " />
-                                    </svg>
-                                    <span class="hexagon-icon bottom-left">
-                                        <div class="tooltip-container">
-                                            Esprit d'entraide
-                                            <span class="tooltip">L'autonomie oui, mais pas aux dépens de l'entraide au
-                                                sein d'une
-                                                équipe.</span>
-                                        </div>
-                                    </span>
-
-                                </div>
-                                <div>
-                                    <?xml version="1.0" encoding="utf-8"?>
-
-
-                                    <svg class="hexagon top-left color-1" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;"
-                                        xml:space="preserve">
-                                        <style type="text/css">
-                                            .st5 {
-                                                fill: #22222252;
-                                            }
-                                        </style>
-                                        <polygon class="st5"
-                                            points="74.7,7.2 25.3,7.2 0.5,50 25.3,92.8 74.7,92.8 99.5,50 " />
-                                    </svg>
-                                    <span class="hexagon-icon top-left">
-
-                                        <div class="tooltip-container">
-                                            Adaptabilité
-                                            <span class="tooltip tooltip2">Une facilité à s'adapter aux
-                                                environnements, aux outils aux besoins d'un projet.</span>
-                                        </div>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- Compétences version mobile -->
-                            <div class="container-competences-mobile">
-                                <div class="square-competence" id="square1">
-                                    <div class="tooltip-container">
-                                        Curiosité
-                                        <span class="tooltip tooltip3">
-                                            Soif d'apprendre et d'aller plus loin.</span>
-                                    </div>
-                                </div>
-
-                                <div class="square-competence" id="square2">
-                                    <div class="tooltip-container">
-                                        Travail en équipe
-                                        <span class="tooltip tooltip4">J'ai travaillé en équipe à de nombreuses
-                                            occasions,
-                                            j'ai ainsi
-                                            développé des compétences de communication et d'organisation.</span>
-                                    </div>
-                                </div>
-
-                                <div class="square-competence" id="square3">
-                                    <div class="tooltip-container">
-                                        Attention <br /> aux détails
-                                        <span class="tooltip tooltip3">Je suis méticuleuse et fais attention aux
-                                            détails subtils.</span>
-                                    </div>
-                                </div>
-
-                                <div class="square-competence" id="square4">
-                                    <div class="tooltip-container">
-                                        Autonomie
-                                        <span class="tooltip tooltip4">Je sais chercher par mes propres
-                                            moyens.</span>
-                                    </div>
-                                </div>
-
-                                <div class="square-competence" id="square5">
-                                    <div class="tooltip-container">
-                                        Esprit <br /> d'entraide
-                                        <span class="tooltip tooltip3">L'autonomie oui, mais pas aux dépens de
-                                            l'entraide au
-                                            sein d'une
-                                            équipe.</span>
-                                    </div>
-                                </div>
-
-                                <div class="square-competence" id="square6">
-                                    <div class="tooltip-container">
-                                        Adaptabilité
-                                        <span class="tooltip tooltip5">Une facilité à s'adapter aux
-                                            environnements, aux outils aux besoins d'un projet.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="competences-bloc">
+            <div id="bloc-competences">
+                <h3><i class="fa-solid fa-bookmark i-left"></i>Compétences<i class="fa-solid fa-bookmark i-right"></i></h3>
+                <div class="competences-wrap">
+                    <div class="competences-pills" role="tablist">
+                        <button class="competences-pill is-active" data-competence="curiosite"><i class="fa-solid fa-lightbulb"></i> Curiosité</button>
+                        <button class="competences-pill" data-competence="equipe"><i class="fa-solid fa-people-group"></i> Travail en équipe</button>
+                        <button class="competences-pill" data-competence="details"><i class="fa-solid fa-magnifying-glass"></i> Attention aux détails</button>
+                        <button class="competences-pill" data-competence="autonomie"><i class="fa-solid fa-compass"></i> Autonomie</button>
+                        <button class="competences-pill" data-competence="entraide"><i class="fa-solid fa-handshake-angle"></i> Esprit d'entraide</button>
+                        <button class="competences-pill" data-competence="adaptabilite"><i class="fa-solid fa-shuffle"></i> Adaptabilité</button>
+                    </div>
+                    <div class="competences-panel">
+                        <div class="competences-content is-active" data-competence-target="curiosite"><p>Soif d'apprendre et d'aller plus loin.</p></div>
+                        <div class="competences-content" data-competence-target="equipe"><p>J'ai travaillé en équipe à de nombreuses occasions et y ai développé des compétences de communication et d'organisation.</p></div>
+                        <div class="competences-content" data-competence-target="details"><p>Je suis méticuleuse et fais attention aux détails subtils.</p></div>
+                        <div class="competences-content" data-competence-target="autonomie"><p>Je sais chercher par mes propres moyens.</p></div>
+                        <div class="competences-content" data-competence-target="entraide"><p>L'autonomie oui, mais pas aux dépens de l'entraide au sein d'une équipe.</p></div>
+                        <div class="competences-content" data-competence-target="adaptabilite"><p>Une facilité à m'adapter aux environnements, aux outils et aux besoins d'un projet.</p></div>
                     </div>
                 </div>
             </div>

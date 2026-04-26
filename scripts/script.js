@@ -153,3 +153,16 @@ window.onload = function () {
     handleScroll();
 })();
 
+
+// Compétences : pills -> change le contenu actif
+document.querySelectorAll('.competences-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+        const target = pill.dataset.competence;
+        const wrap = pill.closest('.competences-wrap');
+        wrap.querySelectorAll('.competences-pill').forEach(p => p.classList.remove('is-active'));
+        wrap.querySelectorAll('.competences-content').forEach(c => c.classList.remove('is-active'));
+        pill.classList.add('is-active');
+        wrap.querySelector(`[data-competence-target="${target}"]`).classList.add('is-active');
+    });
+});
+

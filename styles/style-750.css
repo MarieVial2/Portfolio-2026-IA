@@ -188,111 +188,39 @@ header h2 {
 
 /* COMPETENCES */
 
-#bloc-competences {
-    margin-top: 100px;
-    padding-left: 0;
-    border-left: none;
+#competences {
+    padding: 60px 15px;
+    margin: 80px 0;
 }
 
-#bloc-competences h3 {
-    padding-bottom: 20px;
-    margin-top: 100px;
-}
-
-#bloc-autres i {
-    font-size: 15px;
+.competences-bloc {
+    margin-bottom: 60px;
 }
 
 #bloc-autres h3 {
     font-size: 1.25rem;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 20px;
-    
 }
 
-
-#competences {
-    padding: 20px;
+#bloc-autres .autres-cat-label {
+    min-width: 100%;
 }
 
-/* Code issu de CodePen */
-.container-competences {
-    display: none;
-}
-
-.container-competences-mobile {
-    display: block;
-    display: flex;
+#bloc-autres .autres-cat {
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 250px;
 }
 
-@media (min-width: 300px) and (max-width: 750px) {
-    .container-competences-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-    }
+#bloc-autres .autres-tag {
+    font-size: 0.8rem;
+    padding: 5px 12px;
 }
 
-
-.square-competence {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-
+/* Pills compétences - mobile */
+.competences-pill {
+    flex: 1 1 calc(50% - 10px);
+    font-size: 0.85rem;
+    padding: 8px 12px;
 }
 
-.tooltip3 {
-    /* Définit une position du tooltip plus à gauche (car léger décalage) */
-    right: -65px;
+.competences-panel {
+    padding: 24px 20px;
 }
-
-.tooltip4 {
-    /* Définit une position du tooltip plus à gauche (car léger décalage) */
-    right: -60px;
-}
-
-.tooltip5 {
-    /* Définit une position du tooltip plus à gauche (car léger décalage) */
-    right: -65px;
-}
-
-#square1 {
-    background-color: #000000;
-    color: white;
-}
-
-#square2 {
-    background-color: #212121;
-    color: white;
-}
-
-#square3 {
-    background-color: #3d3d3d;
-    color: white;
-}
-
-#square4 {
-    background-color: #666666;
-    color: white;
-}
-
-#square5 {
-    background-color: #9d9d9d;
-
-}
-
-#square6 {
-    background-color: #cbcbcb;
-
-}
-

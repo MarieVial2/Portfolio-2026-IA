@@ -116,12 +116,24 @@
 
     <header>
         <img src="images/header1.jpg" alt="" role="presentation" class="image-accessibilite" />
-        <div>
+        <div class="header-badge" aria-label="Disponible pour stage ou alternance">
+            <span class="header-badge-dot" aria-hidden="true"></span>
+            Disponible · Stage / Alternance
+        </div>
+        <div class="header-contenu">
+            <div class="header-photo-nom">
+                <img src="images/PhotoMarie.jpg" alt="" role="presentation" />
+                <span class="brand-name">Marie Vial</span>
+            </div>
             <h2>Développeuse<span class="image-accessibilite"> full-stack, back-end, front-end ou junior.</span>
                 <span class="txt-rotate" aria-hidden="true" data-period="2000"
                     data-rotate='[ " full-stack.", " back-end.", " front-end.", " junior."]'></span>
             </h2>
         </div>
+        <a class="header-scroll" href="#presentation" aria-label="Aller à la section Présentation">
+            <span aria-hidden="true">Découvrir</span>
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </a>
     </header>
 
 

@@ -144,8 +144,44 @@ nav {
 }
 
 
+header {
+    padding: 100px 15px 80px;
+}
+
 header h2 {
     font-size: 1.5rem;
+}
+
+.header-contenu {
+    padding: 30px 22px;
+}
+
+.header-badge {
+    top: 15px;
+    right: 15px;
+    font-size: 0.7rem;
+    padding: 7px 14px;
+}
+
+.header-photo-nom {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.header-photo-nom img {
+    width: 56px;
+    height: 56px;
+}
+
+.header-photo-nom .brand-name {
+    font-size: 1.5rem;
+}
+
+.header-scroll {
+    bottom: 18px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
 
 /* PRESENTATION */

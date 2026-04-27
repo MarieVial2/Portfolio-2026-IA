@@ -121,7 +121,7 @@
 
     <section id="presentation">
         <div class="container">
-            <h3><i class="fa-solid fa-bookmark i-left"></i>Présentation<i class="fa-solid fa-bookmark i-right"></i></h3>
+            <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Présentation</span><i class="fa-solid fa-feather i-right"></i></span></h3>
             <div class="presentation-hero">
                 <div class="presentation-header">
                     <div class="presentation-photo-wrap">
@@ -190,8 +190,7 @@
 
 
     <section id="parcours">
-        <h3 class="animate-on-scroll"><i class="fa-solid fa-bookmark i-left"></i>Parcours<i
-                class="fa-solid fa-bookmark i-right"></i></h3>
+        <h3 class="animate-on-scroll"><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Parcours</span><i class="fa-solid fa-feather i-right"></i></span></h3>
         <ol class="parcours-timeline">
             <li class="parcours-entry animate-on-scroll">
                 <div class="parcours-date">2025 – 2027</div>
@@ -235,8 +234,7 @@
 
     <section id="realisations">
         <div class="container ">
-            <h3><i class="fa-solid fa-bookmark i-left"></i>Mes réalisations<i class="fa-solid fa-bookmark i-right"></i>
-            </h3>
+            <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Mes réalisations</span><i class="fa-solid fa-feather i-right"></i></span></h3>
             <div class="row row-cols-1 row-cols-md-2 g-4 animate-on-scroll">
                 <div class="col">
                     <div class="card projet-card h-100">
@@ -322,16 +320,9 @@
         <div class="row">
             <div id="paragraphe-realisations"><strong>Autres projets</strong>
 
-                <p><i class="fa-solid fa-graduation-cap"></i> BUT informatique - travaux de groupe : station météo avec Raspberry Pi (Python/Flask); app web de
-                    ticketing (PHP)</p>
-                <p><i class="fa-solid fa-code"></i> DWWM : intégration de maquettes,
-                    réalisations de sites vitrines, de
-                    sites fonctionnels en PHP (PDO) et en Symfony. Vous pouvez les
-                    trouver sur
-                    mon GitHub : <br />
-                    <a class="btn btn-outline-dark" href="https://github.com/MarieVial2" role="button">Y
-                        aller</a>
-                </p>
+                <p><i class="fa-solid fa-graduation-cap"></i> <span class="par-titre">BUT informatique</span> — travaux de groupe : station météo avec Raspberry Pi (Python/Flask); app web de ticketing (PHP)</p>
+                <p><i class="fa-solid fa-code"></i> <span class="par-titre">DWWM</span> — intégration de maquettes, réalisations de sites vitrines, de sites fonctionnels en PHP (PDO) et en Symfony. Vous pouvez les trouver sur mon GitHub :</p>
+                <a class="btn btn-outline-dark" href="https://github.com/MarieVial2" role="button">Y aller</a>
 
 
             </div>
@@ -345,7 +336,7 @@
     <section id="competences">
 
         <div class="competences-bloc">
-            <h3><i class="fa-solid fa-bookmark i-left"></i>Technologies<i class="fa-solid fa-bookmark i-right"></i></h3>
+            <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Technologies</span><i class="fa-solid fa-feather i-right"></i></span></h3>
             <div id="bloc-technologies">
                 <div class="techno-tile" style="--brand:#e34f26" data-niveau="Bon niveau">
                     <div class="techno-hex"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
@@ -379,7 +370,7 @@
 
         <div class="competences-bloc">
             <div id="bloc-autres">
-                <h3><i class="fa-solid fa-bookmark i-left"></i>Autres<i class="fa-solid fa-bookmark i-right"></i></h3>
+                <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Autres</span><i class="fa-solid fa-feather i-right"></i></span></h3>
                 <div class="autres-cats">
                     <div class="autres-cat">
                         <span class="autres-cat-label"><i class="fa-solid fa-code"></i>Autres langages</span>
@@ -423,7 +414,7 @@
 
         <div class="competences-bloc">
             <div id="bloc-competences">
-                <h3><i class="fa-solid fa-bookmark i-left"></i>Compétences<i class="fa-solid fa-bookmark i-right"></i></h3>
+                <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Compétences</span><i class="fa-solid fa-feather i-right"></i></span></h3>
                 <div class="competences-wrap">
                     <div class="competences-pills" role="tablist">
                         <button class="competences-pill is-active" data-competence="curiosite"><i class="fa-solid fa-lightbulb"></i> Curiosité</button>
@@ -450,23 +441,36 @@
 
 
     <footer>
-
-        <div id="footer">
-            <h6>Retrouvez-moi sur :</h6>
-            <p> <a href="https://www.linkedin.com/in/marie-vial-d%C3%A9veloppement-web16/"><i
-                        class="fa-brands fa-linkedin"></i></a> <a href="https://github.com/MarieVial2"><i
-                        class="fa-brands fa-square-github"></i></a>
+        <div class="footer-cols">
+            <div class="footer-col footer-col-about">
+                <img src="images/PhotoMarie.jpg" alt="Marie Vial" class="footer-photo" />
+                <h5>Marie Vial</h5>
+                <p>Développeuse junior en reconversion, en BUT Informatique à Lyon. Curieuse, méticuleuse, et toujours en train d'apprendre.</p>
+            </div>
+            <div class="footer-col footer-col-nav">
+                <h6><i class="fa-solid fa-feather"></i> Naviguer</h6>
+                <ul>
+                    <li><a href="#presentation">Présentation</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#realisations">Réalisations</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-contact">
+                <h6><i class="fa-solid fa-feather"></i> Me contacter</h6>
+                <p><a href="mailto:vial.marie16@gmail.com">vial.marie16@gmail.com</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Lyon, France</p>
+                <a href="cv/CV_Marie_Vial_Developpement.pdf" download class="btn btn-outline-light btn-sm">Téléchargez mon CV</a>
+            </div>
+        </div>
+        <div class="footer-bar"></div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Marie Vial · Tous droits réservés</p>
+            <p class="footer-socials">
+                <a href="https://www.linkedin.com/in/marie-vial-d%C3%A9veloppement-web16/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/MarieVial2" aria-label="GitHub"><i class="fa-brands fa-square-github"></i></a>
             </p>
         </div>
-        <div id="telecharger">
-            <a href="cv/CV_Marie_Vial_Developpement.pdf" download class="btn btn-outline-light">
-                Téléchargez mon CV
-            </a>
-        </div>
-        <div id="copyrights">
-            <p>© Copyright 2026 - Marie VIAL. Tous droits réservés.</p>
-        </div>
-
     </footer>
  <!-- Bouton de retour vers le haut -->
     <div id="up"><i class="fa-solid fa-chevron-up"></i></div>

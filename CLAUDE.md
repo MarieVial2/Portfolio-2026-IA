@@ -24,7 +24,7 @@ Site portfolio statique de Marie Vial (développeuse web junior). Pas de systèm
 ## Conventions importantes
 
 - Tout le contenu est en français — conserver le français pour tous les textes de l'interface.
-- Les titres de section suivent un patron cohérent : icônes bookmark encadrant le titre (`<i class="fa-solid fa-bookmark i-left"></i>Titre<i class="fa-solid fa-bookmark i-right"></i>`).
+- Les titres de section suivent un patron cohérent : `<h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Titre</span><i class="fa-solid fa-feather i-right"></i></span></h3>` — traits horizontaux haut/bas, plumes dorées encadrant le titre, rangée d'étoiles ✦ générée via `::after`.
 - Les images décoratives qui nécessitent une accessibilité lecteur d'écran utilisent la classe `image-accessibilite` (les positionne hors écran visuellement tout en les conservant dans le DOM).
 - Le menu burger est activé/désactivé via la classe `active` sur `#menuToggle` ; cliquer sur un lien de navigation ou n'importe où en dehors le ferme.
 - Les animations au scroll ciblent `.animate-on-scroll`, `.animate-on-scroll2`, `.animate-on-scroll3` — ajouter cette classe aux éléments devant apparaître au défilement.

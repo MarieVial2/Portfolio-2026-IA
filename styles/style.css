@@ -37,11 +37,53 @@ body {
 /* PARAMETRES GLOBAUX */
 
 h3 {
-    text-align: center;
     font-family: "Quicksand";
-    font-size: 2.19rem;
-    padding: 15px;
+    color: rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 18px 40px 14px;
+    margin: 40px auto;
+    width: fit-content;
+    border-top: 1px solid rgb(34, 34, 34);
+    border-bottom: 1px solid rgb(34, 34, 34);
+    text-align: center;
 }
+
+h3 .lbl-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+}
+
+h3 .lbl {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 400;
+}
+
+h3::after {
+    content: "✦   ✦   ✦";
+    font-size: 0.7rem;
+    color: #c98a3b;
+    letter-spacing: 4px;
+    opacity: 0.7;
+    margin-top: 2px;
+}
+
+h3 .i-left,
+h3 .i-right {
+    rotate: 0deg;
+    margin: 0;
+    font-size: 1.1rem;
+    color: #c98a3b;
+    display: inline-block;
+}
+
+h3 .i-left { transform: rotate(-20deg); }
+h3 .i-right { transform: rotate(20deg) scaleX(-1); }
 
 .i-left {
     rotate: 90deg;
@@ -570,50 +612,57 @@ strong {
 
 
 #paragraphe-realisations {
-    text-align: center;
-    margin-top: 40px;
+    margin: 40px auto 0;
     padding: 20px 10px;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #paragraphe-realisations strong {
-    display: inline-block;
+    display: block;
+    text-align: center;
     font-family: "Quicksand";
-    font-size: 1.3rem;
-    padding: 0 20px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: rgb(34, 34, 34);
+    margin-bottom: 30px;
+    padding-bottom: 12px;
     position: relative;
-    margin-bottom: 25px;
 }
 
-#paragraphe-realisations strong::before,
 #paragraphe-realisations strong::after {
     content: "";
     position: absolute;
-    top: 50%;
+    left: 50%;
+    bottom: 0;
     width: 60px;
     height: 1px;
-    background-color: rgb(34, 34, 34);
-}
-
-#paragraphe-realisations strong::before {
-    right: 100%;
-}
-
-#paragraphe-realisations strong::after {
-    left: 100%;
+    background-color: rgba(34, 34, 34, 0.25);
+    transform: translateX(-50%);
 }
 
 #paragraphe-realisations p {
-    font-style: italic;
+    border-left: 2px solid #c9a24a;
+    padding: 6px 0 6px 22px;
+    margin-bottom: 22px;
     line-height: 1.7;
-    margin-bottom: 16px;
+    font-style: normal;
+    color: rgb(50, 50, 50);
 }
 
 #paragraphe-realisations p i {
     font-style: normal;
+    color: #c9a24a;
     margin-right: 10px;
+    font-size: 0.95rem;
+}
+
+#paragraphe-realisations .par-titre {
+    font-family: "Quicksand";
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.9rem;
     color: rgb(34, 34, 34);
 }
 
@@ -622,8 +671,10 @@ strong {
     list-style-type: none;
 }
 
-#paragraphe-realisations a {
-    margin: 20px;
+#paragraphe-realisations > a {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
 }
 
 
@@ -632,10 +683,6 @@ strong {
 #competences {
     padding: 110px 20px;
     margin: 150px 0;
-}
-
-#competences h3 {
-    border: none;
 }
 
 .competences-bloc {
@@ -869,77 +916,135 @@ strong {
 
 footer {
     background-color: rgb(34, 34, 34);
-    color: white;
-    height: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color: #f0e6d2;
+    padding: 55px 8% 25px;
 }
 
 footer a {
-    color: white;
-    transition: all 1s;
+    transition: color 0.3s;
 }
 
-footer a i {
-    font-size: 1.88rem;
-    margin: 0 15px;
+.footer-cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 30px;
 }
 
-footer a:hover {
-    color: rgb(152, 152, 152);
+.footer-col h5 {
+    font-family: "Itim", cursive;
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 10px 0 8px;
 }
 
-#footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.footer-col h6 {
+    font-family: "Quicksand", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: #c98a3b;
+    margin-bottom: 18px;
 }
 
-#copyrights p {
-    text-align: center;
-    font-size: 0.69rem;
+.footer-col h6 i {
+    margin-right: 8px;
+    transform: rotate(-20deg);
+    display: inline-block;
 }
 
-#header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(34, 34, 34);
+.footer-col p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #cfc4ad;
+    margin-bottom: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #f0e6d2;
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 14px;
+}
+
+.footer-col ul li a::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #c98a3b;
+    font-size: 0.6rem;
+    top: 4px;
+}
+
+.footer-col ul li a:hover {
+    color: #c98a3b;
+}
+
+.footer-photo {
+    width: 60px;
     height: 60px;
-    color: white;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #c98a3b;
 }
 
-#header a {
-    color: white;
+.footer-col-contact a {
+    color: #c98a3b;
     text-decoration: none;
 }
 
-#telecharger{
+.footer-col-contact .btn {
+    margin-top: 12px;
+}
+
+.footer-bar {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #c98a3b, transparent);
+    margin-bottom: 18px;
+}
+
+.footer-bottom {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top : 15px;
-    margin-bottom: 20px;
 }
 
-#conteneur {
-    display: flex;
-    width: 100%;
+.footer-copy {
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.75rem;
+    color: #888;
+    margin: 0;
 }
 
-#aside {
-    width: 20vw;
-    height: 100%;
-    background-color: rgb(34, 34, 34);
-    color: white;
+.footer-socials {
+    margin: 0;
 }
 
-#aside a {
-    color: white;
+.footer-socials a {
+    color: #f0e6d2;
+    margin-left: 14px;
 }
 
+.footer-socials a i {
+    font-size: 1.5rem;
+}
 
+.footer-socials a:hover {
+    color: #c98a3b;
+}
 
 /*# sourceMappingURL=style.css.map */
+

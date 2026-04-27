@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(head -n 984 styles/style.css)",
+      "Bash(mv styles/style.css.new styles/style.css)",
+      "Bash(rtk read *)",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\vialm\\\\OneDrive\\\\Documents\\\\Cours et code\\\\Portfolios\\\\Portfolio.2\\\\styles\\\\style.css\"\\)[0..2]; $bytes -join \",\")",
+      "Bash(rtk git *)",
+      "Bash(xxd)",
+      "PowerShell($f = \"C:\\\\Users\\\\vialm\\\\OneDrive\\\\Documents\\\\Cours et code\\\\Portfolios\\\\Portfolio.2\\\\styles\\\\style.css\"; $content = [System.IO.File]::ReadAllText\\($f, [System.Text.UTF8Encoding]::new\\($true\\)\\); [System.IO.File]::WriteAllText\\($f, $content, [System.Text.UTF8Encoding]::new\\($false\\)\\))",
+      "PowerShell($f = \"C:\\\\Users\\\\vialm\\\\OneDrive\\\\Documents\\\\Cours et code\\\\Portfolios\\\\Portfolio.2\\\\styles\\\\style.css\"; $text = [System.IO.File]::ReadAllText\\($f\\); $lines = $text -split \"`r?`n\"; for \\($i=0; $i -lt $lines.Length; $i++\\) { if \\($lines[$i] -match '^#header \\\\{$'\\) { Write-Host \"header at $i\" }; if \\($lines[$i] -match 'sourceMappingURL'\\) { Write-Host \"map at $i\" } })",
+      "PowerShell($f = \"C:\\\\Users\\\\vialm\\\\OneDrive\\\\Documents\\\\Cours et code\\\\Portfolios\\\\Portfolio.2\\\\styles\\\\style.css\"; $text = [System.IO.File]::ReadAllText\\($f\\); $nl = if \\($text -match \"`r`n\"\\) { \"`r`n\" } else { \"`n\" }; $lines = $text -split \"`r?`n\"; $kept = $lines[0..1047] + $lines[1082..\\($lines.Length-1\\)]; $out = \\($kept -join $nl\\); [System.IO.File]::WriteAllText\\($f, $out, [System.Text.UTF8Encoding]::new\\($false\\)\\))"
+    ]
+  }
+}

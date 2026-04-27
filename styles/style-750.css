@@ -92,18 +92,22 @@ body {
     font-size: 0.75rem;
 }
 
-.body {
-    height: 100%;
+h3 {
+    padding: 14px 20px 10px;
 }
 
-h3 {
-    font-size: 1.25rem;
-    padding: 0;
-    padding-bottom: 20px;
+h3 .lbl {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+}
 
-    margin: 0;
-    /* width: 200px; */
-    text-align: center;
+h3 .lbl-row {
+    gap: 12px;
+}
+
+h3 .i-left,
+h3 .i-right {
+    font-size: 0.95rem;
 }
 
 .i-left {
@@ -182,10 +186,6 @@ header h2 {
     height: 140px;
 }
 
-.tailleur {
-    padding-right : 23px;
-}
-
 /* COMPETENCES */
 
 #competences {
@@ -195,6 +195,34 @@ header h2 {
 
 .competences-bloc {
     margin-bottom: 60px;
+}
+
+/* Bloc technologies - mobile : grille fluide, plus de décalage nid d'abeilles */
+#bloc-technologies {
+    gap: 10px;
+    padding: 30px 0 10px;
+}
+
+.techno-tile {
+    width: 95px;
+    height: 110px;
+}
+
+.techno-hex i {
+    font-size: 1.5rem;
+}
+
+.techno-hex span {
+    font-size: 0.7rem;
+}
+
+.techno-tile:nth-child(n+5):nth-child(-n+7) {
+    margin-top: 0;
+}
+
+.techno-tile::after {
+    font-size: 0.7rem;
+    padding: 4px 8px;
 }
 
 #bloc-autres h3 {

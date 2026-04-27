@@ -10,6 +10,52 @@ body {
 
 }
 
+/* Lien d'évitement (skip link) — visible uniquement au focus clavier */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 200;
+    background: #fffdf6;
+    color: #222;
+    padding: 12px 18px;
+    border: 2px solid #c98a3b;
+    border-radius: 4px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    left: 12px;
+    top: 12px;
+}
+
+/* Focus visible global cohérent */
+:focus-visible {
+    outline: 2px solid #c98a3b;
+    outline-offset: 3px;
+}
+
+/* Préférence de mouvement réduit : on désactive animations et transitions */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+
+    .animate-on-scroll,
+    .animate-on-scroll2,
+    .animate-on-scroll3 {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 /* Bouton de retour en haut de page */
 
 #up {
@@ -18,6 +64,8 @@ body {
     height : 50px;
     border-radius: 50%;
     border : 1px solid rgb(34, 34, 34);
+    padding: 0;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,6 +177,13 @@ h1 {
     text-align: center;
 }
 
+.brand-name {
+    font-family: "Itim";
+    font-size: 2.50rem;
+    text-align: center;
+    display: inline-block;
+}
+
 #menu-desktop {
     display: flex;
     justify-content: space-between;
@@ -144,7 +199,7 @@ h1 {
     color: rgb(34, 34, 34);
 }
 
-#logo h1 {
+#logo .brand-name {
     font-size: 1.5rem;
     margin: 0;
 }
@@ -334,7 +389,7 @@ strong {
     font-size: 2.2rem;
     font-weight: 400;
     line-height: 1.2;
-    margin-bottom: 15px;
+    margin: 1.83rem 0 15px;
 }
 
 .presentation-accroche span {
@@ -416,7 +471,7 @@ strong {
     margin-bottom: 2px;
 }
 
-.presentation-etape h5 {
+.presentation-etape h4 {
     font-family: "Quicksand";
     font-size: 1rem;
     margin: 0;
@@ -518,8 +573,10 @@ strong {
     margin-bottom: 6px;
 }
 
-.parcours-card h5 {
+.parcours-card h4 {
     margin: 0 0 6px;
+    font-size: 0.83em;
+    font-weight: bold;
 }
 
 .parcours-card p {
@@ -609,10 +666,11 @@ strong {
     padding: 18px 10px 22px 10px;
 }
 
-.projet-card h6 {
+.projet-card h4 {
     font-family: "Itim", cursive;
     font-size: 1.5rem;
     margin-bottom: 8px;
+    font-weight: normal;
 }
 
 .techno-realisations-items i {
@@ -718,6 +776,7 @@ strong {
     max-width: 800px;
     margin: 0 auto;
     padding: 60px 0 20px;
+    list-style: none;
 }
 
 .techno-tile {
@@ -947,23 +1006,25 @@ footer a {
     margin-bottom: 30px;
 }
 
-.footer-col h5 {
+.footer-col .footer-brand {
     font-family: "Itim", cursive;
     color: #fff;
     font-size: 1.6rem;
     margin: 10px 0 8px;
+    font-weight: normal;
 }
 
-.footer-col h6 {
+.footer-col .footer-title {
     font-family: "Quicksand", sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 0.85rem;
     color: #c98a3b;
     margin-bottom: 18px;
+    font-weight: normal;
 }
 
-.footer-col h6 i {
+.footer-col .footer-title i {
     margin-right: 8px;
     transform: rotate(-20deg);
     display: inline-block;

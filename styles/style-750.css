@@ -29,6 +29,10 @@
 
 #burger {
     cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    display: block;
 }
 
 
@@ -126,7 +130,7 @@ h5 {
     font-size: 1rem;
 }
 
-.card h6 {
+.card h4 {
     font-size: 1.2rem;
 }
 

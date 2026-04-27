@@ -29,6 +29,14 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" media="screen and (max-width: 750px)" href="styles/style-750.css" />
 
+    <!-- Fallback no-JS pour les animations au scroll -->
+    <noscript>
+        <style>
+            .animate-on-scroll,
+            .animate-on-scroll2,
+            .animate-on-scroll3 { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
 
     <!-- Javascript -->
     <script defer src="scripts/script.js"></script>
@@ -36,23 +44,26 @@
 </head>
 
 <body>
-    <nav>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <h1 class="image-accessibilite">Portfolio de Marie Vial — Développeuse Web</h1>
+
+    <nav aria-label="Navigation principale">
         <div id="menuToggle">
 
-            <div id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button id="burger" type="button" aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
 
 
             <ul id="menu">
 
-                <div id="logo-menu-burger">
-                    <div><i class="fa-solid fa-bookmark i-left"></i></div>
-                    <h1>Marie Vial</h1>
-                    <div><i class="fa-solid fa-bookmark i-right"></i></div>
-                </div>
+                <li id="logo-menu-burger" aria-hidden="true">
+                    <div><i class="fa-solid fa-bookmark i-left" aria-hidden="true"></i></div>
+                    <span class="brand-name">Marie Vial</span>
+                    <div><i class="fa-solid fa-bookmark i-right" aria-hidden="true"></i></div>
+                </li>
                 <li><a href="#presentation">
                         Présentation
                     </a></li>
@@ -74,8 +85,8 @@
 
         <div id="menu-desktop">
 
-            <a id="logo" href="#">
-                <h1>Marie Vial</h1>
+            <a id="logo" href="#" aria-label="Retour en haut de la page">
+                <span class="brand-name">Marie Vial</span>
             </a>
 
             <div id="nav">
@@ -104,19 +115,21 @@
     </nav>
 
     <header>
-        <img src="images/header1.jpg" alt="en tête d'un ordinateur avec du code" class="image-accessibilite" />
+        <img src="images/header1.jpg" alt="" role="presentation" class="image-accessibilite" />
         <div>
-            <h2>Développeuse
-                <span class="txt-rotate" data-period="2000"
+            <h2>Développeuse<span class="image-accessibilite"> full-stack, back-end, front-end ou junior.</span>
+                <span class="txt-rotate" aria-hidden="true" data-period="2000"
                     data-rotate='[ " full-stack.", " back-end.", " front-end.", " junior."]'></span>
             </h2>
         </div>
     </header>
-   
 
-    <section id="presentation">
+
+    <main id="contenu">
+
+    <section id="presentation" aria-labelledby="titre-presentation">
         <div class="container">
-            <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Présentation</span><i class="fa-solid fa-feather i-right"></i></span></h3>
+            <h3 id="titre-presentation"><span class="lbl-row"><i class="fa-solid fa-feather i-left" aria-hidden="true"></i><span class="lbl">Présentation</span><i class="fa-solid fa-feather i-right" aria-hidden="true"></i></span></h3>
             <div class="presentation-hero">
                 <div class="presentation-header">
                     <div class="presentation-photo-wrap">
@@ -124,7 +137,7 @@
                     </div>
                     <div class="presentation-intro">
                         <p class="presentation-stats">35 ans · Lyon · BUT2 Informatique</p>
-                        <h2 class="presentation-accroche">Marie Vial,<br><span>développeuse en construction.</span></h2>
+                        <p class="presentation-accroche">Marie Vial,<br><span>développeuse en construction.</span></p>
                         <p class="presentation-pitch">Une reconversion menée étape par étape — de l'accompagnement éducatif au développement.</p>
                     </div>
                 </div>
@@ -132,10 +145,10 @@
                 <div class="presentation-etapes">
                     <article class="presentation-etape">
                         <div class="presentation-etape-tete">
-                            <span class="presentation-puce"><i class="fa-solid fa-seedling"></i></span>
+                            <span class="presentation-puce" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
                             <div>
                                 <span class="presentation-label">Hier</span>
-                                <h5>2023 — La bascule</h5>
+                                <h4>2023 — La bascule</h4>
                             </div>
                         </div>
                         <p>Titre Professionnel <strong>Développeur Web et Web Mobile</strong> obtenu à Arinfo. Première immersion dans le code et confirmation de la voie.</p>
@@ -143,10 +156,10 @@
 
                     <article class="presentation-etape presentation-etape-active">
                         <div class="presentation-etape-tete">
-                            <span class="presentation-puce"><i class="fa-solid fa-rocket"></i></span>
+                            <span class="presentation-puce" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
                             <div>
                                 <span class="presentation-label">Aujourd'hui</span>
-                                <h5>BUT Informatique — IUT Lyon 1</h5>
+                                <h4>BUT Informatique — IUT Lyon 1</h4>
                             </div>
                         </div>
                         <p>Je consolide ma culture informatique et je code au quotidien avec :</p>
@@ -164,10 +177,10 @@
 
                     <article class="presentation-etape">
                         <div class="presentation-etape-tete">
-                            <span class="presentation-puce"><i class="fa-solid fa-bullseye"></i></span>
+                            <span class="presentation-puce" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></span>
                             <div>
                                 <span class="presentation-label">Demain</span>
-                                <h5>Stage BUT puis alternance</h5>
+                                <h4>Stage BUT puis alternance</h4>
                             </div>
                         </div>
                         <p>Recherche d'un <strong>stage de fin d'année</strong> et idéalement d'une <strong>alternance</strong> à la rentrée. A la rentrée : Spring Boot et Angular.</p>
@@ -176,7 +189,7 @@
 
                 <div class="presentation-ctas">
                     <a class="btn btn-dark" href="mailto:vial.marie16@gmail.com">Me contacter</a>
-                    <a class="btn btn-outline-dark" href="cv/CV_Marie_Vial_Developpement.pdf" target="_blank" rel="noopener">Voir mon CV</a>
+                    <a class="btn btn-outline-dark" href="cv/CV_Marie_Vial_Developpement.pdf" target="_blank" rel="noopener noreferrer" aria-label="Voir mon CV (ouvre dans un nouvel onglet)">Voir mon CV</a>
                 </div>
             </div>
         </div>
@@ -184,42 +197,42 @@
 
 
 
-    <section id="parcours">
-        <h3 class="animate-on-scroll"><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Parcours</span><i class="fa-solid fa-feather i-right"></i></span></h3>
+    <section id="parcours" aria-labelledby="titre-parcours">
+        <h3 id="titre-parcours" class="animate-on-scroll"><span class="lbl-row"><i class="fa-solid fa-feather i-left" aria-hidden="true"></i><span class="lbl">Parcours</span><i class="fa-solid fa-feather i-right" aria-hidden="true"></i></span></h3>
         <ol class="parcours-timeline">
             <li class="parcours-entry animate-on-scroll">
                 <div class="parcours-date">2025 – 2027</div>
                 <div class="parcours-card">
-                    <h5>BUT Informatique — année spéciale</h5>
+                    <h4>BUT Informatique — année spéciale</h4>
                     <p>Orientation développement d'applications, IUT Lyon 1.</p>
                 </div>
             </li>
             <li class="parcours-entry animate-on-scroll">
                 <div class="parcours-date">2023</div>
                 <div class="parcours-card">
-                    <h5>Site du Bagad Orvez</h5>
+                    <h4>Site du Bagad Orvez</h4>
                     <p>Réalisation du site du Bagad d'Orvault et de son école de musique.</p>
-                    <a href="https://bagadorvez.bzh" class="btn btn-outline-dark btn-sm">Y aller</a>
+                    <a href="https://bagadorvez.bzh" class="btn btn-outline-dark btn-sm" rel="noopener noreferrer" aria-label="Voir le site du Bagad Orvez (ouvre dans un nouvel onglet)" target="_blank">Y aller</a>
                 </div>
             </li>
             <li class="parcours-entry animate-on-scroll">
                 <div class="parcours-date">2022 – 2023</div>
                 <div class="parcours-card">
-                    <h5>Formation DWWM</h5>
+                    <h4>Formation DWWM</h4>
                     <p>Développeur Web et Web Mobile, Arinfo (Nantes).</p>
                 </div>
             </li>
             <li class="parcours-entry animate-on-scroll">
                 <div class="parcours-date">2016 – 2025</div>
                 <div class="parcours-card">
-                    <h5>Missions d'accompagnement éducatif</h5>
+                    <h4>Missions d'accompagnement éducatif</h4>
                     <p>Aide aux devoirs, soutien scolaire, coaching d'adolescents et poste d'AESH.</p>
                 </div>
             </li>
             <li class="parcours-entry animate-on-scroll">
                 <div class="parcours-date">2014 – 2016</div>
                 <div class="parcours-card">
-                    <h5>Parcours universitaire en Sciences du langage</h5>
+                    <h4>Parcours universitaire en Sciences du langage</h4>
                     <p>Licence (Lyon II) puis Master Didactique des langues et FLE (Savoie Mont-Blanc).</p>
                 </div>
             </li>
@@ -227,83 +240,83 @@
     </section>
 
 
-    <section id="realisations">
+    <section id="realisations" aria-labelledby="titre-realisations">
         <div class="container ">
-            <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Mes réalisations</span><i class="fa-solid fa-feather i-right"></i></span></h3>
+            <h3 id="titre-realisations"><span class="lbl-row"><i class="fa-solid fa-feather i-left" aria-hidden="true"></i><span class="lbl">Mes réalisations</span><i class="fa-solid fa-feather i-right" aria-hidden="true"></i></span></h3>
             <div class="row row-cols-1 row-cols-md-2 g-4 animate-on-scroll">
                 <div class="col">
                     <div class="card projet-card h-100">
-                        <img src="images/site-bagad.jpg" class="card-img-top" alt="Site du Bagad Orvez">
+                        <img src="images/site-bagad.jpg" class="card-img-top" alt="Capture d'écran du site du Bagad Orvez">
                         <div class="card-body">
-                            <h6>Site du Bagad Orvez</h6>
+                            <h4>Site du Bagad Orvez</h4>
                             <p>Site du Bagad d'Orvault et de son école de musique.</p>
-                            <p class="techno-realisations-items">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-square-js"></i>
-                                <i class="fa-brands fa-bootstrap"></i>
-                                <i class="fa-brands fa-php"></i>
-                                <i class="fa-brands fa-symfony"></i>
+                            <p class="techno-realisations-items" aria-label="Technologies : HTML, CSS, JavaScript, Bootstrap, PHP, Symfony">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-square-js" aria-hidden="true"></i>
+                                <i class="fa-brands fa-bootstrap" aria-hidden="true"></i>
+                                <i class="fa-brands fa-php" aria-hidden="true"></i>
+                                <i class="fa-brands fa-symfony" aria-hidden="true"></i>
                             </p>
-                            <a href="https://bagadorvez.bzh" class="btn btn-outline-dark btn-sm">Voir la page</a>
+                            <a href="https://bagadorvez.bzh" class="btn btn-outline-dark btn-sm" rel="noopener noreferrer" target="_blank" aria-label="Voir la page du Bagad Orvez (ouvre dans un nouvel onglet)">Voir la page</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card projet-card h-100">
-                        <img src="images/portfolio.jpg" class="card-img-top" alt="Portfolio">
+                        <img src="images/portfolio.jpg" class="card-img-top" alt="Capture d'écran du portfolio de Marie Vial">
                         <div class="card-body">
-                            <h6>Portfolio</h6>
+                            <h4>Portfolio</h4>
                             <p>Vous y êtes !</p>
-                            <p class="techno-realisations-items">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-square-js"></i>
-                                <i class="fa-brands fa-bootstrap"></i>
+                            <p class="techno-realisations-items" aria-label="Technologies : HTML, CSS, JavaScript, Bootstrap">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-square-js" aria-hidden="true"></i>
+                                <i class="fa-brands fa-bootstrap" aria-hidden="true"></i>
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card projet-card h-100">
-                        <img src="images/factures.jpg" class="card-img-top" alt="App de factures">
+                        <img src="images/factures.jpg" class="card-img-top" alt="Capture d'écran de l'application de factures">
                         <div class="card-body">
-                            <h6>App de factures</h6>
+                            <h4>App de factures</h4>
                             <p>Réalisation en groupe d'une application de génération et consultation de factures avec authentification utilisateur/admin. Partie prise en charge (entre autres) : controllers des relevés, des factures.</p>
-                            <p class="techno-realisations-items">
-                                <i class="fa-brands fa-java"></i>
+                            <p class="techno-realisations-items" aria-label="Technologies : Java">
+                                <i class="fa-brands fa-java" aria-hidden="true"></i>
                             </p>
-                            <a href="https://github.com/MarieVial2/Electronvert" class="btn btn-outline-dark btn-sm">Voir le code</a>
+                            <a href="https://github.com/MarieVial2/Electronvert" class="btn btn-outline-dark btn-sm" rel="noopener noreferrer" target="_blank" aria-label="Voir le code de l'app de factures sur GitHub (ouvre dans un nouvel onglet)">Voir le code</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card projet-card h-100">
-                        <img src="images/blog.jpg" class="card-img-top" alt="Blog Les dés sont jetés">
+                        <img src="images/blog.jpg" class="card-img-top" alt="Capture d'écran du blog Les dés sont jetés">
                         <div class="card-body">
-                            <h6>Blog "Les dés sont jetés"</h6>
+                            <h4>Blog "Les dés sont jetés"</h4>
                             <p>Un blog fonctionnel (avec gestion d'articles, de commentaires et de catégories)</p>
-                            <p class="techno-realisations-items">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <i class="fa-brands fa-bootstrap"></i>
-                                <i class="fa-brands fa-php"></i>
+                            <p class="techno-realisations-items" aria-label="Technologies : HTML, CSS, Bootstrap, PHP">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                                <i class="fa-brands fa-bootstrap" aria-hidden="true"></i>
+                                <i class="fa-brands fa-php" aria-hidden="true"></i>
                             </p>
-                            <a href="https://github.com/MarieVial2/blog_les_des_sont_jetes" class="btn btn-outline-dark btn-sm">Voir le code</a>
+                            <a href="https://github.com/MarieVial2/blog_les_des_sont_jetes" class="btn btn-outline-dark btn-sm" rel="noopener noreferrer" target="_blank" aria-label="Voir le code du blog Les dés sont jetés sur GitHub (ouvre dans un nouvel onglet)">Voir le code</a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card projet-card h-100">
-                        <img src="images/the.jpg" class="card-img-top" alt="L'art du thé">
+                        <img src="images/the.jpg" class="card-img-top" alt="Capture d'écran du site L'art du thé">
                         <div class="card-body">
-                            <h6>L'art du thé</h6>
+                            <h4>L'art du thé</h4>
                             <p>Intégration d'une maquette de site dédié au thé</p>
-                            <p class="techno-realisations-items">
-                                <i class="fa-brands fa-html5"></i>
-                                <i class="fa-brands fa-css3-alt"></i>
+                            <p class="techno-realisations-items" aria-label="Technologies : HTML, CSS">
+                                <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
                             </p>
-                            <a href="https://marievial2.github.io/site-the/" class="btn btn-outline-dark btn-sm">Voir la page</a>
+                            <a href="https://marievial2.github.io/site-the/" class="btn btn-outline-dark btn-sm" rel="noopener noreferrer" target="_blank" aria-label="Voir la page L'art du thé (ouvre dans un nouvel onglet)">Voir la page</a>
                         </div>
                     </div>
                 </div>
@@ -315,9 +328,9 @@
         <div class="row">
             <div id="paragraphe-realisations"><strong>Autres projets</strong>
 
-                <p><i class="fa-solid fa-graduation-cap"></i> <span class="par-titre">BUT informatique</span> — travaux de groupe : station météo avec Raspberry Pi (Python/Flask); app web de ticketing (PHP)</p>
-                <p><i class="fa-solid fa-code"></i> <span class="par-titre">DWWM</span> — intégration de maquettes, réalisations de sites vitrines, de sites fonctionnels en PHP (PDO) et en Symfony. Vous pouvez les trouver sur mon GitHub :</p>
-                <a class="btn btn-outline-dark" href="https://github.com/MarieVial2" role="button">Y aller</a>
+                <p><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> <span class="par-titre">BUT informatique</span> — travaux de groupe : station météo avec Raspberry Pi (Python/Flask); app web de ticketing (PHP)</p>
+                <p><i class="fa-solid fa-code" aria-hidden="true"></i> <span class="par-titre">DWWM</span> — intégration de maquettes, réalisations de sites vitrines, de sites fonctionnels en PHP (PDO) et en Symfony. Vous pouvez les trouver sur mon GitHub :</p>
+                <a class="btn btn-outline-dark" href="https://github.com/MarieVial2" role="button" rel="noopener noreferrer" target="_blank" aria-label="Voir les autres projets sur GitHub (ouvre dans un nouvel onglet)">Y aller</a>
 
 
             </div>
@@ -328,65 +341,65 @@
 
     </section>
 
-    <section id="competences">
+    <section id="competences" aria-labelledby="titre-technologies">
 
         <div class="competences-bloc">
-            <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Technologies</span><i class="fa-solid fa-feather i-right"></i></span></h3>
-            <div id="bloc-technologies">
-                <div class="techno-tile" style="--brand:#e34f26" data-niveau="Bon niveau">
-                    <div class="techno-hex"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#1572b6" data-niveau="Bon niveau">
-                    <div class="techno-hex"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#f7df1e" data-niveau="Intermédiaire">
-                    <div class="techno-hex"><i class="fa-brands fa-square-js"></i><span>JavaScript</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#7952b3" data-niveau="Bon niveau">
-                    <div class="techno-hex"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#cc6699" data-niveau="Notions">
-                    <div class="techno-hex"><i class="fa-brands fa-sass"></i><span>Sass</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#777bb4" data-niveau="Intermédiaire">
-                    <div class="techno-hex"><i class="fa-brands fa-php"></i><span>PHP</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#000000" data-niveau="Débutante">
-                    <div class="techno-hex"><i class="fa-brands fa-symfony"></i><span>Symfony</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#ed8b00" data-niveau="Intermédiaire">
-                    <div class="techno-hex"><i class="fa-brands fa-java"></i><span>Java</span></div>
-                </div>
-                <div class="techno-tile" style="--brand:#a8b9cc" data-niveau="Notions">
-                    <div class="techno-hex"><i class="fa-solid fa-c"></i><span>C</span></div>
-                </div>
-            </div>
+            <h3 id="titre-technologies"><span class="lbl-row"><i class="fa-solid fa-feather i-left" aria-hidden="true"></i><span class="lbl">Technologies</span><i class="fa-solid fa-feather i-right" aria-hidden="true"></i></span></h3>
+            <ul id="bloc-technologies" aria-label="Liste des technologies maîtrisées">
+                <li class="techno-tile" style="--brand:#e34f26" data-niveau="Bon niveau">
+                    <div class="techno-hex"><i class="fa-brands fa-html5" aria-hidden="true"></i><span>HTML</span><span class="image-accessibilite"> — Bon niveau</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#1572b6" data-niveau="Bon niveau">
+                    <div class="techno-hex"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><span>CSS</span><span class="image-accessibilite"> — Bon niveau</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#f7df1e" data-niveau="Intermédiaire">
+                    <div class="techno-hex"><i class="fa-brands fa-square-js" aria-hidden="true"></i><span>JavaScript</span><span class="image-accessibilite"> — Intermédiaire</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#7952b3" data-niveau="Bon niveau">
+                    <div class="techno-hex"><i class="fa-brands fa-bootstrap" aria-hidden="true"></i><span>Bootstrap</span><span class="image-accessibilite"> — Bon niveau</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#cc6699" data-niveau="Débutante">
+                    <div class="techno-hex"><i class="fa-brands fa-sass" aria-hidden="true"></i><span>Sass</span><span class="image-accessibilite"> — Notions</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#777bb4" data-niveau="Intermédiaire">
+                    <div class="techno-hex"><i class="fa-brands fa-php" aria-hidden="true"></i><span>PHP</span><span class="image-accessibilite"> — Intermédiaire</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#000000" data-niveau="Débutante">
+                    <div class="techno-hex"><i class="fa-brands fa-symfony" aria-hidden="true"></i><span>Symfony</span><span class="image-accessibilite"> — Débutante</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#ed8b00" data-niveau="Intermédiaire">
+                    <div class="techno-hex"><i class="fa-brands fa-java" aria-hidden="true"></i><span>Java</span><span class="image-accessibilite"> — Intermédiaire</span></div>
+                </li>
+                <li class="techno-tile" style="--brand:#a8b9cc" data-niveau="Débutante">
+                    <div class="techno-hex"><i class="fa-solid fa-c" aria-hidden="true"></i><span>C</span><span class="image-accessibilite"> — Notions</span></div>
+                </li>
+            </ul>
         </div>
 
-        <div class="competences-bloc">
+        <div class="competences-bloc" aria-labelledby="titre-autres">
             <div id="bloc-autres">
-                <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Autres</span><i class="fa-solid fa-feather i-right"></i></span></h3>
+                <h3 id="titre-autres"><span class="lbl-row"><i class="fa-solid fa-feather i-left" aria-hidden="true"></i><span class="lbl">Autres</span><i class="fa-solid fa-feather i-right" aria-hidden="true"></i></span></h3>
                 <div class="autres-cats">
                     <div class="autres-cat">
-                        <span class="autres-cat-label"><i class="fa-solid fa-code"></i>Autres langages</span>
+                        <span class="autres-cat-label"><i class="fa-solid fa-code" aria-hidden="true"></i>Autres langages</span>
                         <span class="autres-tag t-rose">Kotlin</span>
                         <span class="autres-tag t-rose">Jetpack Compose</span>
                         <span class="autres-tag t-rose">Vue.js</span>
                         <span class="autres-tag t-rose">SQL / PL-SQL</span>
                     </div>
                     <div class="autres-cat">
-                        <span class="autres-cat-label"><i class="fa-solid fa-wand-magic-sparkles"></i>IA &amp; prompting</span>
+                        <span class="autres-cat-label"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>IA &amp; prompting</span>
                         <span class="autres-tag t-purple">Claude CLI</span>
                         <span class="autres-tag t-purple">ChatGPT</span>
                         <span class="autres-tag t-purple">Économie tokens</span>
                     </div>
                     <div class="autres-cat">
-                        <span class="autres-cat-label"><i class="fa-solid fa-diagram-project"></i>Modélisation</span>
+                        <span class="autres-cat-label"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i>Modélisation</span>
                         <span class="autres-tag t-blue">UML</span>
                         <span class="autres-tag t-blue">Merise</span>
                     </div>
                     <div class="autres-cat">
-                        <span class="autres-cat-label"><i class="fa-solid fa-check-double"></i>Qualité &amp; web</span>
+                        <span class="autres-cat-label"><i class="fa-solid fa-check-double" aria-hidden="true"></i>Qualité &amp; web</span>
                         <span class="autres-tag t-green">Tests unitaires</span>
                         <span class="autres-tag t-green">Bonnes pratiques</span>
                         <span class="autres-tag t-green">Maquettage</span>
@@ -394,38 +407,38 @@
                         <span class="autres-tag t-green">Accessibilité</span>
                     </div>
                     <div class="autres-cat">
-                        <span class="autres-cat-label"><i class="fa-solid fa-microchip"></i>Culture info</span>
+                        <span class="autres-cat-label"><i class="fa-solid fa-microchip" aria-hidden="true"></i>Culture info</span>
                         <span class="autres-tag t-amber">Réseaux</span>
                         <span class="autres-tag t-amber">Architecture</span>
                         <span class="autres-tag t-amber">Programmation système</span>
                     </div>
                     <div class="autres-cat">
-                        <span class="autres-cat-label"><i class="fa-solid fa-globe"></i>Langues</span>
+                        <span class="autres-cat-label"><i class="fa-solid fa-globe" aria-hidden="true"></i>Langues</span>
                         <span class="autres-tag t-rose">Anglais — C1</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="competences-bloc">
+        <div class="competences-bloc" aria-labelledby="titre-competences">
             <div id="bloc-competences">
-                <h3><span class="lbl-row"><i class="fa-solid fa-feather i-left"></i><span class="lbl">Compétences</span><i class="fa-solid fa-feather i-right"></i></span></h3>
+                <h3 id="titre-competences"><span class="lbl-row"><i class="fa-solid fa-feather i-left" aria-hidden="true"></i><span class="lbl">Compétences</span><i class="fa-solid fa-feather i-right" aria-hidden="true"></i></span></h3>
                 <div class="competences-wrap">
-                    <div class="competences-pills" role="tablist">
-                        <button class="competences-pill is-active" data-competence="curiosite"><i class="fa-solid fa-lightbulb"></i> Curiosité</button>
-                        <button class="competences-pill" data-competence="equipe"><i class="fa-solid fa-people-group"></i> Travail en équipe</button>
-                        <button class="competences-pill" data-competence="details"><i class="fa-solid fa-magnifying-glass"></i> Attention aux détails</button>
-                        <button class="competences-pill" data-competence="autonomie"><i class="fa-solid fa-compass"></i> Autonomie</button>
-                        <button class="competences-pill" data-competence="entraide"><i class="fa-solid fa-handshake-angle"></i> Esprit d'entraide</button>
-                        <button class="competences-pill" data-competence="adaptabilite"><i class="fa-solid fa-shuffle"></i> Adaptabilité</button>
+                    <div class="competences-pills" role="tablist" aria-label="Liste des compétences personnelles">
+                        <button class="competences-pill is-active" role="tab" id="tab-curiosite" aria-selected="true" aria-controls="panel-curiosite" tabindex="0" data-competence="curiosite"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Curiosité</button>
+                        <button class="competences-pill" role="tab" id="tab-equipe" aria-selected="false" aria-controls="panel-equipe" tabindex="-1" data-competence="equipe"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Travail en équipe</button>
+                        <button class="competences-pill" role="tab" id="tab-details" aria-selected="false" aria-controls="panel-details" tabindex="-1" data-competence="details"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Attention aux détails</button>
+                        <button class="competences-pill" role="tab" id="tab-autonomie" aria-selected="false" aria-controls="panel-autonomie" tabindex="-1" data-competence="autonomie"><i class="fa-solid fa-compass" aria-hidden="true"></i> Autonomie</button>
+                        <button class="competences-pill" role="tab" id="tab-entraide" aria-selected="false" aria-controls="panel-entraide" tabindex="-1" data-competence="entraide"><i class="fa-solid fa-handshake-angle" aria-hidden="true"></i> Esprit d'entraide</button>
+                        <button class="competences-pill" role="tab" id="tab-adaptabilite" aria-selected="false" aria-controls="panel-adaptabilite" tabindex="-1" data-competence="adaptabilite"><i class="fa-solid fa-shuffle" aria-hidden="true"></i> Adaptabilité</button>
                     </div>
                     <div class="competences-panel">
-                        <div class="competences-content is-active" data-competence-target="curiosite"><p>Soif d'apprendre et d'aller plus loin.</p></div>
-                        <div class="competences-content" data-competence-target="equipe"><p>J'ai travaillé en équipe à de nombreuses occasions et y ai développé des compétences de communication et d'organisation.</p></div>
-                        <div class="competences-content" data-competence-target="details"><p>Je suis méticuleuse et fais attention aux détails subtils.</p></div>
-                        <div class="competences-content" data-competence-target="autonomie"><p>Je sais chercher par mes propres moyens.</p></div>
-                        <div class="competences-content" data-competence-target="entraide"><p>L'autonomie oui, mais pas aux dépens de l'entraide au sein d'une équipe.</p></div>
-                        <div class="competences-content" data-competence-target="adaptabilite"><p>Une facilité à m'adapter aux environnements, aux outils et aux besoins d'un projet.</p></div>
+                        <div class="competences-content is-active" id="panel-curiosite" role="tabpanel" aria-labelledby="tab-curiosite" tabindex="0" data-competence-target="curiosite"><p>Soif d'apprendre et d'aller plus loin.</p></div>
+                        <div class="competences-content" id="panel-equipe" role="tabpanel" aria-labelledby="tab-equipe" tabindex="0" hidden data-competence-target="equipe"><p>J'ai travaillé en équipe à de nombreuses occasions et y ai développé des compétences de communication et d'organisation.</p></div>
+                        <div class="competences-content" id="panel-details" role="tabpanel" aria-labelledby="tab-details" tabindex="0" hidden data-competence-target="details"><p>Je suis méticuleuse et fais attention aux détails subtils.</p></div>
+                        <div class="competences-content" id="panel-autonomie" role="tabpanel" aria-labelledby="tab-autonomie" tabindex="0" hidden data-competence-target="autonomie"><p>Je sais chercher par mes propres moyens.</p></div>
+                        <div class="competences-content" id="panel-entraide" role="tabpanel" aria-labelledby="tab-entraide" tabindex="0" hidden data-competence-target="entraide"><p>L'autonomie oui, mais pas aux dépens de l'entraide au sein d'une équipe.</p></div>
+                        <div class="competences-content" id="panel-adaptabilite" role="tabpanel" aria-labelledby="tab-adaptabilite" tabindex="0" hidden data-competence-target="adaptabilite"><p>Une facilité à m'adapter aux environnements, aux outils et aux besoins d'un projet.</p></div>
                     </div>
                 </div>
             </div>
@@ -433,17 +446,18 @@
 
     </section>
 
+    </main>
 
 
     <footer>
         <div class="footer-cols">
             <div class="footer-col footer-col-about">
-                <img src="images/PhotoMarie.jpg" alt="Marie Vial" class="footer-photo" />
-                <h5>Marie Vial</h5>
+                <img src="images/PhotoMarie.jpg" alt="" role="presentation" class="footer-photo" />
+                <h2 class="footer-brand">Marie Vial</h2>
                 <p>Développeuse junior en reconversion, en BUT Informatique à Lyon. Curieuse, méticuleuse, et toujours en train d'apprendre.</p>
             </div>
             <div class="footer-col footer-col-nav">
-                <h6><i class="fa-solid fa-feather"></i> Naviguer</h6>
+                <h3 class="footer-title"><i class="fa-solid fa-feather" aria-hidden="true"></i> Naviguer</h3>
                 <ul>
                     <li><a href="#presentation">Présentation</a></li>
                     <li><a href="#parcours">Parcours</a></li>
@@ -452,23 +466,23 @@
                 </ul>
             </div>
             <div class="footer-col footer-col-contact">
-                <h6><i class="fa-solid fa-feather"></i> Me contacter</h6>
+                <h3 class="footer-title"><i class="fa-solid fa-feather" aria-hidden="true"></i> Me contacter</h3>
                 <p><a href="mailto:vial.marie16@gmail.com">vial.marie16@gmail.com</a></p>
-                <p><i class="fa-solid fa-location-dot"></i> Lyon, France</p>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Lyon, France</p>
                 <a href="cv/CV_Marie_Vial_Developpement.pdf" download class="btn btn-outline-light btn-sm">Téléchargez mon CV</a>
             </div>
         </div>
-        <div class="footer-bar"></div>
+        <div class="footer-bar" aria-hidden="true"></div>
         <div class="footer-bottom">
             <p class="footer-copy">© 2026 Marie Vial · Tous droits réservés</p>
             <p class="footer-socials">
-                <a href="https://www.linkedin.com/in/marie-vial-d%C3%A9veloppement-web16/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/MarieVial2" aria-label="GitHub"><i class="fa-brands fa-square-github"></i></a>
+                <a href="https://www.linkedin.com/in/marie-vial-d%C3%A9veloppement-web16/" rel="noopener noreferrer" target="_blank" aria-label="Profil LinkedIn de Marie Vial (ouvre dans un nouvel onglet)"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/MarieVial2" rel="noopener noreferrer" target="_blank" aria-label="Profil GitHub de Marie Vial (ouvre dans un nouvel onglet)"><i class="fa-brands fa-square-github" aria-hidden="true"></i></a>
             </p>
         </div>
     </footer>
  <!-- Bouton de retour vers le haut -->
-    <div id="up"><i class="fa-solid fa-chevron-up"></i></div>
+    <button id="up" type="button" aria-label="Revenir en haut de la page" tabindex="-1"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i></button>
 </body>
 
 </html>
